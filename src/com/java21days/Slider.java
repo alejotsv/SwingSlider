@@ -11,10 +11,14 @@ public class Slider extends JFrame {
         JPanel panel = new JPanel();
         setSize(dim);
         JSlider slider = new JSlider(SwingConstants.HORIZONTAL, min, max, current);
+        slider.setMinorTickSpacing(5);
+        slider.setMajorTickSpacing(10);
+        slider.setPaintTicks(true);
         panel.add(slider);
         add(panel);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
+        pack();
     }
 }
