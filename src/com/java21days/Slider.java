@@ -17,8 +17,17 @@ public class Slider extends JFrame {
         panel.add(slider);
         add(panel);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLookAndFeel();
         setLocationRelativeTo(null);
         setVisible(true);
         pack();
+    }
+
+    void setLookAndFeel(){
+        try{
+            UIManager.setLookAndFeel(UIManager.getInstalledLookAndFeels()[3].getClassName());
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }
