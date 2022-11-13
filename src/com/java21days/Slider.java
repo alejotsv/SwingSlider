@@ -10,7 +10,8 @@ public class Slider extends JFrame {
         super(title);
         JPanel panel = new JPanel();
         setSize(dim);
-
+        JSlider slider = new JSlider(SwingConstants.HORIZONTAL, min, max, current);
+        panel.add(slider);
         add(panel);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
